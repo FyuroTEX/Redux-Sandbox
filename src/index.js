@@ -9,9 +9,12 @@ const { dispatch } = store;
 
 
 
-const incDispatch = bindActionCreators(inc, dispatch);
-const decDispatch = bindActionCreators(dec, dispatch);
-const rndDispatch = bindActionCreators(rnd, dispatch);   // const rndDispatch = (payload) => dispatch(rnd(payload));
+const { incDispatch, decDispatch, rndDispatch } = bindActionCreators({
+    incDispatch: inc,
+    decDispatch: dec,
+    rndDispatch: rnd
+}, dispatch);
+
 
 document.getElementById('inc').addEventListener('click', incDispatch);
 
