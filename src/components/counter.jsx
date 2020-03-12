@@ -33,12 +33,8 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
 
-    const { inc, dec, rnd } = bindActionCreators(actions, dispatch);
-    return {
-        inc,
-        dec,
-        rnd
-    };
+    return bindActionCreators(actions, dispatch);
+    
 };
 
 
